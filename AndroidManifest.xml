@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sniptease"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+   <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+ 
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <!-- Creates a custom permission so only this app can receive its messages. -->
+
+    <permission
+        android:name="com.example.sniptease.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.sniptease.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.google.android.gcm.GCMConstant.PERMISSION_GCM_INTENTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme" >
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.example.sniptease" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.example.sniptease.MainMenuActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:uiOptions="splitActionBarWhenNarrow" >
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+        </activity>
+        <activity
+            android:name="com.example.sniptease.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
+            android:windowActionBar="false"
+            android:windowSoftInputMode="adjustPan" >
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <!-- android:windowSoftInputMode="adjustResize|stateVisible" -->
+        </activity>
+        <activity
+            android:name="com.example.sniptease.SplashActivity"
+            android:label="@string/title_activity_splash"
+            android:screenOrientation="portrait"
+            android:windowActionBar="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.sniptease.RegisterNewUserActivity"
+            android:label="@string/title_activity_register_new_user"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.sniptease.ActionBarNavigation"
+            android:label="ActionBarNavigation" />
+        <activity
+            android:name="com.example.sniptease.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="com.example.sniptease.MainMenuActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sniptease.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name="com.example.sniptease.CameraActivity"
+            android:label="@string/title_activity_camera"
+            android:parentActivityName="com.example.sniptease.MainMenuActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sniptease.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name="com.example.sniptease.EditProfileActivity"
+            android:label="@string/title_activity_edit_profile"
+            android:parentActivityName="com.example.sniptease.MainMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sniptease.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name="com.example.sniptease.BrowsePictureActivity"
+            android:label="@string/title_activity_browse_picture" >
+        </activity>
+        <activity
+            android:name="com.example.sniptease.MessengerActivity"
+            android:label="@string/title_activity_messenger"
+            android:parentActivityName="com.example.sniptease.MainMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sniptease.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name="com.example.sniptease.SnipViewerActivity"
+            android:label="@string/title_activity_snip_viewer"
+            android:parentActivityName="com.example.sniptease.MainMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sniptease.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name="com.example.sniptease.QuestionViewerActivity"
+            android:label="@string/title_activity_question_viewer"
+            android:parentActivityName="com.example.sniptease.MainMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sniptease.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name="com.example.sniptease.ViewAProfileActivity"
+            android:label="@string/title_activity_view_aprofile"
+            android:parentActivityName="com.example.sniptease.MainMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sniptease.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name="com.example.sniptease.SnipAttachQuestionActivity"
+            android:label="@string/title_activity_snip_attach_question"
+            android:parentActivityName="com.example.sniptease.CameraActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sniptease.CameraActivity" />
+        </activity>
+        <activity
+            android:name="com.example.sniptease.SnipRecipientsActivity"
+            android:label="@string/title_activity_snip_recipients" >
+        </activity>
+    </application>
+
+  
+
+</manifest>

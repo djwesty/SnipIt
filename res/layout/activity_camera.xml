@@ -1,0 +1,115 @@
+
+  <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:id="@+id/camera_preview"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:layout_weight="1" >
+
+      <GridLayout
+          android:id="@+id/camera_grid"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:columnCount="1"
+          android:onClick="buttonTakePicOnClick"
+          android:visibility="visible" >
+
+          <Button
+              android:id="@+id/camera_flipcam"
+              style="?android:attr/buttonStyleSmall"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="left"
+              android:layout_marginLeft="250dp"
+              android:onClick="buttonFlipCamOnClick"
+              android:text="Flip Cam" />
+
+          <Button
+              android:id="@+id/camera_flash_tog"
+              style="?android:attr/buttonStyleSmall"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_column="0"
+              android:layout_gravity="left|top"
+              android:layout_row="0"
+              android:layout_weight="1"
+              android:onClick="buttonFlashOnClick"
+              android:text="Flash" />
+
+          <Button
+              android:id="@+id/camera_snap_pic"
+              android:layout_column="0"
+              android:layout_gravity="center_horizontal|bottom"
+              android:layout_row="0"
+              android:onClick="buttonTakePicOnClick"
+              android:text="Take Pic" />
+
+          <Button
+              android:id="@+id/camera_save"
+              android:layout_column="0"
+              android:layout_gravity="left|bottom"
+              android:layout_row="0"
+              android:onClick="buttonSaveOnClick"
+              android:text="Save" />
+
+          <Button
+              android:id="@+id/camera_send_pic"
+              android:layout_column="0"
+              android:layout_gravity="right|bottom"
+              android:layout_row="0"
+              android:onClick="buttonSendPicOnClick"
+              android:text="Send Pic" />
+
+          <Button
+              android:id="@+id/camera_snap_video"
+              android:layout_column="0"
+              android:layout_gravity="right|bottom"
+              android:layout_row="0"
+              android:onClick="buttonTakeVideoOnClick"
+              android:text="Take Video" />
+
+          <Button
+              android:id="@+id/camera_send_snip"
+              android:layout_column="0"
+              android:layout_gravity="center_horizontal|bottom"
+              android:layout_row="0"
+              android:onClick="buttonSendSnipOnClick"
+              android:text="Send Snip" />
+
+          <Button
+              android:id="@+id/camera_upload"
+              android:layout_column="0"
+              android:layout_gravity="left|bottom"
+              android:layout_row="0"
+              android:onClick="buttonUploadOnClick"
+              android:text="Upload" />
+
+          <Button
+              android:id="@+id/camera_clear"
+              android:layout_column="0"
+              android:layout_gravity="left|top"
+              android:layout_row="0"
+              android:onClick="buttonClearOnClick"
+              android:text="X" />
+
+          <ProgressBar
+              android:id="@+id/camera_video_progress"
+              style="?android:attr/progressBarStyleHorizontal"
+              android:layout_width="match_parent"
+              android:layout_column="0"
+              android:layout_gravity="left|bottom"
+              android:layout_marginBottom="50dp"
+              android:layout_row="0"
+              android:visibility="invisible" />
+
+      </GridLayout>
+
+      <VideoView
+          android:id="@+id/camera_video_view"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:visibility="gone" />
+
+  </FrameLayout>
+
+
+

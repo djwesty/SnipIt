@@ -1,0 +1,111 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sniptease.ViewAProfileActivity"
+    tools:ignore="MergeRootFrame" >
+
+<LinearLayout
+    android:id="@+id/view_profile_background_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CC000000"
+    android:orientation="vertical" >
+
+    <Button
+       
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="right|center_vertical|center_horizontal"
+        android:text="REPORT USER"
+        android:onClick="reportUserOnClick" />
+
+    <ImageView
+        android:id="@+id/view_profile_pro_pic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/ActionBar_and_Tabs"
+        android:layout_weight="0"
+        android:src="@drawable/profile_icon" />
+
+    <TextView
+        android:id="@+id/view_profile_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:text="TextView"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/view_profile_location_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:text="TextView"
+        android:textColor="#FFFFFF" />
+
+    <ToggleButton
+        android:id="@+id/view_profile_following_button_tog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center"
+        android:layout_marginRight="20dp"
+        android:layout_weight="0"
+        android:text="Following"
+        android:onClick="toggleFollowingOnClick" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="#CC000000" >
+
+        <TextView
+            android:id="@+id/view_profile_followers_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Text\nView"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/view_profile_following_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Text\nView"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/view_profile_chat_button"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="100dp"
+            android:onClick="startChatOnClick"
+            android:text="Chat" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000" >
+
+        <TextView
+            android:id="@+id/view_profile_about_me"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="TextView"
+            android:textColor="#FFFFFF" />
+
+    </ScrollView>
+
+</LinearLayout>
+</FrameLayout>

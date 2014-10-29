@@ -1,0 +1,40 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sniptease.SnipRecipientsActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <LinearLayout
+        android:id="@+id/sendSnipFollowersContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <CheckBox
+            android:id="@+id/allFollowersCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="allFollowersCheckBoxOnClick"
+            android:text="All followers" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/uploadSnipButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:onClick="uploadSnipButtonOnClick"
+        android:text="Send Snip" />
+
+    <ProgressBar
+        android:id="@+id/uploadSnipProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>
+

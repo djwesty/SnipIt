@@ -1,0 +1,44 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A3A3C2"
+    tools:context="com.example.sniptease.NewsFragment"
+    android:id="@+id/news_scroll_view"
+     android:layout_marginBottom="30dp"
+        android:layout_marginTop="@dimen/ActionBar_and_Tabs" >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/news_feed_edit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:onClick="editButtonOnClick"
+            android:text="Edit" >
+            </Button>
+
+        <Button
+            android:id="@+id/inviteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Invite =)" />
+
+        <LinearLayout
+            android:id="@+id/news_table"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical" >
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</ScrollView>

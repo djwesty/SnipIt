@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sniptease="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orderInCategory="1"
+        android:title="Save"
+        sniptease:showAsAction="ifRoom">
+    </item>
+    <item
+        android:id="@+id/attach_media_to_snip_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orderInCategory="2"
+        android:title="Snip It"
+        sniptease:showAsAction="ifRoom">
+    </item>
+    <item
+        android:id="@+id/send_media_independent_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orderInCategory="2"
+        android:title="No Snip"
+        sniptease:showAsAction="ifRoom">
+    </item>
+
+</menu>

@@ -1,0 +1,39 @@
+15 July 2014
+SnipIT, To do List:
+	1. Functionality:
+		a. Add refresh wheel on swipe down, in news feed
+		b. In "My Profile" Remove interested in, add followers/following counter. 
+			Add cover photo display and ability to upload/change it.
+		c. In followers, have the list load with generic profile place holder, then update with actual images
+		d. Add "Edit" button to news feed to allow highlighting of snips for deletion.
+		e. Add "Find new followers" button to news feed. Links to new page to add followers by
+			i. Twitter
+			ii. facebook
+			iii. email
+			iv. text
+			v. search users
+		f. add flags and reporting. All snips have a flag button which lead to a popup menu, option for spam, or inappropriate. 
+			after flag, there is a thank-you popup. 
+			Each profile viewing is to contain a report user button, with options of spam, inappropriate, or harassment. Displays same thank you popup
+		g.	Encrypt passwords with MD5
+		h. Add support for google push notifications, with the toggle in the settings menu.
+		i. Add functionality for "legal" menu in settings.
+		j. Add Button to toggle profile as "private" in settings menu.
+		k. Add Alphabetic sorting bars in Following page.
+		l. Fix overlapping display in Following page
+		m. Add functionality to "remember me" in log in, and session time out. 
+		n. Cache News feed, Following list , Chat messages, when navigating away from page
+		o. Android camera support varies between devices. Steps must be taken to support this in CameraActivity.
+		p. On Chat tab, load with generic icon first, then add bitmaps for speed.
+		q. Add \n return characters in messages list preview
+	2. Styling:
+		a. Make snips in news feed 2 column
+		b. In news feed, make caption background bar 80% opaque
+		c. Update checkmark image on news feed
+		d. Complete restyle of "view my profile"
+		e. Complete restyle of settings page
+		f. Complete restyle of followers tab, reformat radiobuttons, add icon for "+" 
+		g. Update camera Icon
+		h. Update buttons in viewing profile. Bold text
+		i. Circleize all profile icons, with white border
+		j. Update all icons within the camera

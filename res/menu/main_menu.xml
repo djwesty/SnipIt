@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sniptease="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.sniptease.MainMenuActivity" >
+
+    <group android:id="@+id/default_main_group" >
+        <item
+            android:id="@+id/action_camera"
+            android:icon="@drawable/camera_icon"
+            android:orderInCategory="1"
+            android:showAsAction="always"
+            android:title="Camera"/>
+        <item
+            android:id="@+id/action_settings"
+            android:icon="@drawable/settings_icon"
+            android:orderInCategory="2"
+            android:showAsAction="always"
+            android:title="@string/action_settings"/>
+        <item
+            android:id="@+id/action_logout"
+            android:icon="@drawable/logout"
+            android:orderInCategory="3"
+            android:showAsAction="always"
+            android:title="Logout"/>
+    </group>
+    <group android:id="@+id/search_bar_group" >
+        <item
+            android:id="@+id/search_bar_friends"
+            android:actionViewClass="android.widget.SearchView"
+            android:enabled="false"
+            android:showAsAction="always"
+            android:title="Find Friends"
+            android:visible="false"/>
+    </group>
+
+</menu>

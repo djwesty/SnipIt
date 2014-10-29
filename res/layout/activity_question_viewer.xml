@@ -1,0 +1,103 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sniptease.QuestionViewerActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/view_profile_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Question"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <Button
+                android:id="@+id/question_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:onClick="hintButtonOnClick"
+                android:text="HINT?" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/question_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="the_question"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tap answer below" />
+
+        <RadioGroup
+            android:id="@+id/question_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/question_option_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="option_A"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <RadioButton
+                android:id="@+id/question_option_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="option_b"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <RadioButton
+                android:id="@+id/question_option_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="option_c"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <RadioButton
+                android:id="@+id/question_option_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="option_d"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/question_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="submitButtonOnClick"
+            android:text="GO FOR IT!" />
+
+        <Button
+            android:id="@+id/question_begin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="BEGIN QUESTION"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</FrameLayout>

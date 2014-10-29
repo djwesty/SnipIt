@@ -1,0 +1,96 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sniptease.EditProfileActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:text="Profile Picture" >
+            </TextView>
+
+            <ImageButton
+                android:id="@+id/edit_profile_upload_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onImageClick"
+                android:src="@drawable/ic_launcher" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="From:" />
+
+        <EditText
+            android:id="@+id/edit_profile_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/view_profile_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interested in" />
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/edit_profile_orientation_group">"
+
+            <RadioButton
+                android:id="@+id/edit_profile_likes_men"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Men" />
+
+            <RadioButton
+                android:id="@+id/edit_profile_likes_women"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Women" />
+
+            <RadioButton
+                android:id="@+id/edit_profile_likes_both"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Both" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/view_profile_location_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About Me" />
+
+        <EditText
+            android:id="@+id/edit_profile_about_me"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textMultiLine" />
+    </LinearLayout>
+
+</FrameLayout>
